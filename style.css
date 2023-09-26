@@ -1,0 +1,46 @@
+body{
+    background-image: url(./assets/bg-mobile.jpg);
+    
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size: cover;
+}
+
+#container{
+    width:380px;
+    height:515px;
+    border: 1px solid red;
+    max-width: 588px;
+    margin: 100px auto 0px;
+    padding: 0 24px; 
+
+}
+#profile{
+    border:1px solid red;
+    text-align:center;
+    padding:26px;
+    margin-top:24px;
+    
+
+}
+
+#profile img{
+    width:100px;
+    border:1px solid red;
+    height:130px;
+    border-radius: 350%;
+}
+
+#profile p{
+
+    font-weight:500px;
+    line-height:24px;
+    margin-top:8px;
+}
+#profile ul{ 
+list-style: none;
+padding: 24px 0;
+display:flex;
+flex-direction: column;
+gap: 16px 
+}
