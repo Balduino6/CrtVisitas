@@ -52,7 +52,7 @@ body *{
     text-align:center;
     padding:26px;
     margin-top:20px;
-    height:510px;
+    height:705px;
     border: 1px solid red;
 }
 
@@ -78,6 +78,7 @@ body *{
     /*elementos block*/
     margin:1px auto;
     border: 1px solid red;
+    margin-top:2rem;
 }
 
 #switch button{
@@ -170,6 +171,7 @@ ul li a:hover{
     padding: 10px 0;
     font-size:24px;
 border:1px solid red;
+    margin-top:1rem;
 }
 
 #social-links a{
@@ -183,7 +185,9 @@ color:black;
 }
 
 #social-links a:hover{
-    
+    height:20px;
+    width:20px;
+
     background: var(--highlight-color);
     padding:20px;
     transition:ease .2s;  
@@ -191,7 +195,7 @@ color:black;
 
 
 footer{
-    margin-top:5rem;
+    margin-top:2rem;
     padding:10px 0;
     text-align:center;
     font-size:16px;
