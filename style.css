@@ -1,46 +1,230 @@
+:root{
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color:rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --highlight-color: rgba(0, 0, 0, 0.2);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+
+}
+
+.light{
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color:rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/sun.svg);
+
+    
+}
+
 body{
-    background-image: url(./assets/bg-mobile.jpg);
+    /*background-image: url(./assets/bg-mobile.jpg);
     
     background-repeat: no-repeat;
     background-position:top center;
-    background-size: cover;
+    background-size: cover;*/
+    background:var(--bg-url) no-repeat top center/cover;
+   height:100vh;
+   
+}
+
+body *{
+    color: var(--text-color);
+    
 }
 
 #container{
-    width:380px;
-    height:515px;
+    width: 100%;
+    height:800px;
     border: 1px solid red;
     max-width: 588px;
-    margin: 100px auto 0px;
-    padding: 0 24px; 
+    margin: 40px auto 0px;
+    padding: 0 24px;
+    min-width:1px;
 
 }
 #profile{
-    border:1px solid red;
+    /*border:1px solid red;*/
     text-align:center;
     padding:26px;
-    margin-top:24px;
-    
-
+    margin-top:20px;
+    height:510px;
+    border: 1px solid red;
 }
 
 #profile img{
-    width:100px;
-    border:1px solid red;
-    height:130px;
+    width:120px;
+    /*border:1px solid red;*/
+    height:180px;
     border-radius: 350%;
+    border: 1px solid red;
 }
 
 #profile p{
-
+    /*border:1px solid red;*/
     font-weight:500px;
     line-height:24px;
-    margin-top:8px;
+    margin-top:6px;
+    border:1px solid red;
 }
+
+#switch{
+    position:relative;
+    width: 64px;
+    /*elementos block*/
+    margin:1px auto;
+    border: 1px solid red;
+}
+
+#switch button{
+    height:32px;
+    width:32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border:0;
+    border-radius:50%;
+
+   /*posicionamento absoluto*/
+    position:absolute;
+    top:50%;
+    left:0;
+    z-index:1;
+    transform:translateY(-50%);
+
+    animation: slide-back 0.2s;
+
+}
+
+
+.light #switch button{
+    /* right:0;
+     left:initial;*/
+     animation: slide-in 0.2s forwards; 
+     
+ }
+ 
+ #switch button:hover{
+     outline:8px solid var(--highlight-color);
+ }
+ 
+ #switch span{
+     display:block;
+     width:64px;
+     height:24px;
+     background:var(--surface-color);
+     border:1px solid var(--stroke-color);
+     backdrop-filter:blur(4px);
+     -webkit-backdrop-filter: blur(4px);
+     border-radius: 9999px; 
+ }
+
+
+
+
 #profile ul{ 
-list-style: none;
-padding: 24px 0;
+    /*border:1px solid red;*/
+    list-style: none;
+    padding: 10px 0;
+    display:flex;
+    flex-direction: column;
+    gap: 16px ;
+    margin-top:2rem;
+    border:1px solid red;
+
+
+}
+
+ul li a{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500px;
+   
+}   
+
+ul li a:hover{
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+#social-links{
+    /*border:1px solid red;*/
+    height: 20px;
+
+    justify-content:center;
+    display: flex;
+
+    padding: 10px 0;
+    font-size:24px;
+border:1px solid red;
+}
+
+#social-links a{
 display:flex;
-flex-direction: column;
-gap: 16px 
+align-items:center;
+justify-content:center;
+padding:10px;
+transition:0.2s;
+border-radius: 50%;
+color:black;
+}
+
+#social-links a:hover{
+    
+    background: var(--highlight-color);
+    padding:20px;
+    transition:ease .2s;  
+}
+
+
+footer{
+    margin-top:5rem;
+    padding:10px 0;
+    text-align:center;
+    font-size:16px;
+    border:1px solid red;
+    
+}
+
+
+@media(min-width){
+    :root {
+        --bg-url:url(./assets/bg-desktop.png);
+    }
+    .light{
+        --bg-url:url(./assets/bg-desktop-light.png);
+    }
+}
+
+/*atroole criando animation*/
+
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-back{
+    from{
+        left:50%;
+    }
+    to{
+        left: 0;
+    }
 }

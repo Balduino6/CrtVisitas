@@ -1,0 +1,66 @@
+body{
+    background:url(assets/bg-mobile.jpg)no-repeat top center/cover;
+    
+}
+
+#container{
+    
+width: 100%;
+height:90vh;
+max-width: 588px;
+margin: 40px 0px;
+padding: 16px 24px;
+min-width:1px;
+
+}
+
+#profile{
+   
+    height: 200px
+    padding:26px;
+    margin-top:20px;
+    height:200px;
+   
+
+
+}
+
+#profile img{
+
+    width:170px;
+    height:190px;
+    border-radius: 350%;
+    margin-top: 30px;
+
+}
+
+#corpo{
+    
+    margin-top:2rem;
+    height:300px;
+
+}
+#corpo p{
+
+    
+    font-family: "Inter", sans-serif;
+    color:white;
+    font-weight:700px;
+    line-height:30px;
+    margin-top:15px;
+    font-size:17px;
+    text-justify: auto;
+}
+
+#back{
+   
+    margin-top:-35rem;
+
+}
+
+#back a{
+    
+    font-family: "Inter", sans-serif;
+    font-size:20px;
+    color:aquamarine
+}

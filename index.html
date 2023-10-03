@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="ligh" >
 
 <head>
     <meta charset="UTF-8">
@@ -12,26 +12,59 @@
     <div id="container">
         <div id="profile">
             <img src="./assets/avatar.jpg">
-            <p>balduino geovane</p>
+            <p>Balduino Geovane</p>
+            <div id="switch" onclick="toggleMode()">
+                <button></button>
+                <span></span>
+            </div>
+            
             <div>
                 <ul>
                     <li>
-                        <a href="*">Quem sou eu?</a>
+                        <a href="sobre.html">Quem sou eu?</a>
                     </li>
                     <li>
-                        <a href="*">ver meu soundcloud</a>
+                        <a href="*" target="_blank">ver meu soundcloud</a>
                     </li>
                     <li>
-                        <a href="*">Ver meu portifolio</a>
+                        <a href="*" target="_blank">Ver meu portifolio</a>
                     </li>
                     <li>
-                        <a href="*">Ir para o facebook</a>
+                        <a href="facebook.com/jodvaldo.dacosta" target="_blank">Ir para o facebook</a>
                     </li>
                 </ul>
             </div>
+            
+            <div id="social-links">
+                <a href="https://github.com/maykbrito" target="_blank">
+                    <ion-icon name="logo-github" title="Github"></ion-icon>
+                </a>
+
+                <a href="https://instagram.com/itsbalduino_geovane" target="_blank">
+                    <ion-icon name="logo-instagram" title="Instagram"></ion-icon>   
+                </a>
+        
+                 <a href="https://youtube.com/maykbrito" target="_blank">
+                     <ion-icon name="logo-youtube" title="Youtube"></ion-icon>
+                </a>
+
+                <a href="https://facebook.com/jodvaldo.dacosta" target="_blank">
+                    <ion-icon name="logo-facebook" title="Facebook"></ion-icon>
+                </a>
+            </div>
+
+            <footer>
+                Feito com amor pelo Balduino Geovane!
+            </footer>
+
         </div>
     </div>
 
     
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>   
+
+    <script src="./script.js"></script>
+
 </body>
 </html>
