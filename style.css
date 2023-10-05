@@ -1,3 +1,4 @@
+/*Initial*/
 :root{
     --text-color: white;
     --bg-url: url(./assets/bg-mobile.jpg);
@@ -9,22 +10,20 @@
 
 }
 
+/*Light mode*/
+
 .light{
     --text-color: black;
     --bg-url: url(./assets/bg-mobile-light.jpg);
-    --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color:rgba(255, 255, 255, 0.1);
-    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);    
+    --stroke-color: rgba(0, 0, 0, 0.5);
     --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(./assets/sun.svg);  
 }
 
 body{
-    /*background-image: url(./assets/bg-mobile.jpg);
-    
-    background-repeat: no-repeat;
-    background-position:top center;
-    background-size: cover;*/
+
     background:var(--bg-url) no-repeat top center/cover;
    height:100vh;
    
@@ -68,6 +67,7 @@ body *{
    
 }
 
+/*Button light/dark mode*/
 #switch{
     position:relative;
     width: 64px;
@@ -178,7 +178,6 @@ color:black;
     transition:ease .2s;  
 }
 
-
 footer{
     margin-top:2rem;
     padding:10px 0;
@@ -187,7 +186,7 @@ footer{
     
 }
 
-
+/*The media query*/
 @media(min-width){
     :root {
         --bg-url:url(./assets/bg-desktop.png);
